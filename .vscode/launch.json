@@ -1,27 +1,16 @@
 {
+    "version": "0.2.0",
     "configurations": [
         {
-            "type": "cppdbg",
+            "name": "Executar sem depuração",  // Nome da configuração
+            "type": "cppdbg",  // Isso ainda pode ser usado, mas sem GDB
             "request": "launch",
-            "program": "insira o nome do programa, por exemplo ${workspaceFolder}/a.out",
+            "program": "${workspaceFolder}/a.out",  // O caminho do seu executável
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${fileDirname}",
+            "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": false,
-            "setupCommands": [
-                {
-                    "description": "Habilitar a reformatação automática para gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                },
-                {
-                    "description": "Definir Tipo de Desmontagem como Intel",
-                    "text": "-gdb-set disassembly-flavor intel",
-                    "ignoreFailures": true
-                }
-            ]
+            "externalConsole": true
         }
-    ],
-    "version": "2.0.0"
+    ]
 }
