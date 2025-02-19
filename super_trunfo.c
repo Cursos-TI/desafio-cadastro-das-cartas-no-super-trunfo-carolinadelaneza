@@ -10,4 +10,5 @@ int main () {
     char cod_carta [15];
     int pontos_turisticos;
     
+    
 }
